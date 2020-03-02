@@ -1,8 +1,8 @@
 //initializing firebase
 var config = {
-    apiKey: "AIzaSyA2QGrQQuHKU30S6xrM9MFwcUzjlcwjltQ",
-    authDomain: "to-do-or-not-to-do-list.firebaseio.com/",
-    databaseURL: "https://to-do-or-not-to-do-list.firebaseio.com/"
+    apiKey: "AIzaSyCknN_Lk3XNKwsggryvBP-ih5vMImqi6cM",
+    authDomain: "productiveproject1.firebaseio.com/",
+    databaseURL: "https://productiveproject1.firebaseio.com/"
 };
 
 firebase.initializeApp(config);
