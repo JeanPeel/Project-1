@@ -91,6 +91,22 @@ label{
   font-size: 6vw;
 }
 
+.total-title {
+  position: relative;
+  background-color: none;
+  color: white;
+  text-align: center;
+  font-size: 6vw;
+}
+
+.total-keeper {
+  position: relative;
+  background-color: none;
+  color: white;
+  text-align: center;
+  font-size: 6vw;
+}
+
 .checkbox {
   margin: 3px 10px 3px 0px;
 }

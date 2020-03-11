@@ -14,9 +14,15 @@ var scoreArray = [];
 
 var currentScore = (scoreArray[0]);
 
+$("#database.total").text(currentScore);
+
 // var scoreKeeper = firebase.database.score();
 
 //Creating new to-do when submit button is clicked.
+
+// $("#database-score").on(document.ready, function (event) {
+//     event.txt(currentScore);
+// }
 
 $("#submitButton").on("click", function (event) {
     event.preventDefault();
@@ -24,6 +30,7 @@ $("#submitButton").on("click", function (event) {
     count++;
     
     $(".score-keeper").html(count); 
+
 
     //grabs user input
     var userToDo = $("#toDoInput").val().trim();
