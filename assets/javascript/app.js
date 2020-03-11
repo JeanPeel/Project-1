@@ -8,11 +8,22 @@ var config = {
 firebase.initializeApp(config);
 
 var database = firebase.database();
+var count = 0;
+
+var scoreArray = [];
+
+var currentScore = (scoreArray[0]);
+
+// var scoreKeeper = firebase.database.score();
 
 //Creating new to-do when submit button is clicked.
 
 $("#submitButton").on("click", function (event) {
     event.preventDefault();
+
+    count++;
+    
+    $(".score-keeper").html(count); 
 
     //grabs user input
     var userToDo = $("#toDoInput").val().trim();
@@ -20,14 +31,16 @@ $("#submitButton").on("click", function (event) {
     var toDoColor = $("#colorOfInput").val().trim();
     var toDoImportanceLevel = $("#importanceLevelInput").val().trim();
     var toDoDueDate = $("#dateDueInput").val().trim();
-
+    var databaseScore = count;
+    
     //Creates local "temporary" object for holding new to-do data
     var newToDo = {
         todo: userToDo,
         category: toDoCategory,
         color: toDoColor,
         importance: toDoImportanceLevel,
-        date: toDoDueDate
+        date: toDoDueDate,
+        score: databaseScore
     };
 
     //Uploads new to-do to the database
@@ -39,6 +52,7 @@ $("#submitButton").on("click", function (event) {
     console.log(newToDo.color);
     console.log(newToDo.importance);
     console.log(newToDo.date);
+    console.log(newToDo.score);
 
     //clears all text-boxes
     $("#toDoInput").val("");
@@ -46,6 +60,7 @@ $("#submitButton").on("click", function (event) {
     $("#colorOfInput").val("#000000");
     $("#importanceLevel").val("");
     $("#dateDueInput").val("");
+
 });
 
 //Create firebase event for adding a row in the html when a user adds an entry.
@@ -85,14 +100,17 @@ database.ref().on("child_added", function (childSnapshot) {
 
     //Append the new row to the table
     $("#to-do-table > #to-do-list").append(newRow);
+
+    $("#database.score").text(value.score);
+
+    var scoreValue = value.score;
+    
+    scoreArray.unshift(scoreValue);
+
+    console.log("Database Score Value: " + value.score);
+    console.log("Score Value: " + value.score);
+    console.log("Score Array: " + scoreArray);
+    console.log("Current Score: " + currentScore);
 });
-$(document).ready(function () {
-    var count = 0;
 
-    $("#submitButton").click(function () {
-        count++;
-        $(".score-keeper").html(count);
-    })
-})
 
-// test change
