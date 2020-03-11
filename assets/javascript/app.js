@@ -104,13 +104,15 @@ database.ref().on("child_added", function (childSnapshot) {
     $("#database.score").text(value.score);
 
     var scoreValue = value.score;
-    
+
     scoreArray.unshift(scoreValue);
 
     console.log("Database Score Value: " + value.score);
     console.log("Score Value: " + value.score);
     console.log("Score Array: " + scoreArray);
     console.log("Current Score: " + currentScore);
+
+    currentScore = (scoreArray[0]);
 });
 
 
