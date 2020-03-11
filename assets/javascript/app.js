@@ -8,13 +8,39 @@ var config = {
 firebase.initializeApp(config);
 
 var database = firebase.database();
-var count = 0;
+// var count = 0;
+
+var total=0;
 
 var scoreArray = [];
+console.log("Score Array: " + scoreArray);
 
-var currentScore = (scoreArray[0]);
+function addUpScore() {
+    for (var i = 0; i < scoreArray.length; i++ ){
+    total += scoreArray[i];
+}
+};
 
-$("#database.total").text(currentScore);
+// const snapshot = firebase.database().ref().once('value');
+
+//  // // This is close V
+
+// database().ref().once('value', function (childSnapshot) {
+//     //Assign values from the database object. 
+//     var key = childSnapshot.key;
+//     var value = childSnapshot.val();
+
+//     //To-Do Information
+//     console.log(value);
+
+//     addUpScore();
+
+//     console.log(`Score Total: ${total}`);
+// });
+
+// var currentScore = (scoreArray[0]);
+
+// $("#database.total").text(currentScore);
 
 // var scoreKeeper = firebase.database.score();
 
@@ -27,9 +53,9 @@ $("#database.total").text(currentScore);
 $("#submitButton").on("click", function (event) {
     event.preventDefault();
 
-    count++;
+    // count++;
     
-    $(".score-keeper").html(count); 
+    // $(".score-keeper").html(count); 
 
 
     //grabs user input
@@ -38,7 +64,7 @@ $("#submitButton").on("click", function (event) {
     var toDoColor = $("#colorOfInput").val().trim();
     var toDoImportanceLevel = $("#importanceLevelInput").val().trim();
     var toDoDueDate = $("#dateDueInput").val().trim();
-    var databaseScore = count;
+    var databaseScore = 1;
     
     //Creates local "temporary" object for holding new to-do data
     var newToDo = {
@@ -108,18 +134,16 @@ database.ref().on("child_added", function (childSnapshot) {
     //Append the new row to the table
     $("#to-do-table > #to-do-list").append(newRow);
 
-    $("#database.score").text(value.score);
+    // $("#database.score").text(value.score);
 
     var scoreValue = value.score;
 
     scoreArray.unshift(scoreValue);
 
     console.log("Database Score Value: " + value.score);
-    console.log("Score Value: " + value.score);
+    
     console.log("Score Array: " + scoreArray);
-    console.log("Current Score: " + currentScore);
 
-    currentScore = (scoreArray[0]);
 });
 
 
