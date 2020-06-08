@@ -10,6 +10,7 @@ This is a webpage built with html and styled with CSS.  It has javascript and JQ
 * Prerequisites
 
 ## About this project
+
 This project is all on one html page.  At the top of the page is a form that the person can fill out about their To Do Item. Options to fill out are the To Do item its self, the Category the item fits into, the Color of the To Do Item, the Level of importance of the To Do item.  And the Due Date of the Item.  AFter clicking the Add To Do button the person sees an princess Avatar that can level up to higher levels in future versions. Also displayed in glitter is the score the person earns as they add in more items.  Towards the bottom is the list of to Do list items and all their atributes.  At the bottom of the page are the different levels the princess Avatar can level through.
 
 ## Tech Used
