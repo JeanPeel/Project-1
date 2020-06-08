@@ -33,10 +33,10 @@ We wanted items that were completed to move to a done part of the APP but this l
 
 ## Authors
 
-* **Nilsen Reyes** - *React Application Building* - [NReyes1202](https://github.com/nreyes1202)
-* **Miranda Dasto** - *React Application Building* - [MiranDadasto](https://github.com/mirandadasto)
-* **Jean Peel** - *React Application Building* - [JeanPeel](https://github.com/JeanPeel)
-* **Swazey Jessup** - *React Application Building* - [SwazeyJessup](https://github.com/swazeyjessup)
+* **Nilsen Reyes** - *Application Building* - [NReyes1202](https://github.com/nreyes1202)
+* **Miranda Dasto** - *Application Building* - [MiranDadasto](https://github.com/mirandadasto)
+* **Jean Peel** - *Application Building* - [JeanPeel](https://github.com/JeanPeel)
+* **Swazey Jessup** - *Application Building* - [SwazeyJessup](https://github.com/swazeyjessup)
 
 ## Acknowledgments
 
